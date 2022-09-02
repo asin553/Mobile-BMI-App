@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="-117dp">
+
+        <!--
+-->
+
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="250dp">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:text="BMI API"
+                android:textAlignment="center"
+                android:textColor="#0E0E0E"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:id="@+id/heightInput"
+                android:layout_width="215dp"
+                android:layout_height="45dp"
+                android:paddingHorizontal="25dp"
+                android:text="Enter height :"
+                android:textAlignment="center"
+                android:textColor="#121111"
+                android:textSize="24sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/height"
+                android:layout_width="195dp"
+                android:layout_height="45dp"
+                android:layout_toEndOf="@id/heightInput"
+                android:paddingHorizontal="25dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/height_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="inches"
+                    android:inputType="number"
+                    android:textAlignment="viewEnd" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginStart="50dp">
+
+            <TextView
+                android:id="@+id/weightInput"
+                android:layout_width="215dp"
+                android:layout_height="45dp"
+                android:paddingHorizontal="25dp"
+                android:text="Enter weight :"
+                android:textAlignment="center"
+                android:textColor="#070707"
+                android:textSize="24sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/weight"
+                android:layout_width="195dp"
+                android:layout_height="45dp"
+                android:layout_toEndOf="@+id/weightInput"
+                android:paddingHorizontal="25dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/weight_value"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="lbs"
+                    android:inputType="number"
+                    android:textAlignment="textEnd" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginRight="100dp">
+
+            <TextView
+                android:id="@+id/bmi_label"
+                android:layout_width="150dp"
+                android:layout_height="44dp"
+                android:paddingLeft="30dp"
+                android:text="BMI"
+                android:textColor="#0B0B0B"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/bmi_value"
+                android:layout_width="250dp"
+                android:layout_height="44dp"
+                android:layout_toEndOf="@id/bmi_label"
+                android:text="Label"
+                android:textColor="#070707"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/msg_label"
+                android:layout_width="250dp"
+                android:layout_height="55dp"
+                android:layout_below="@id/bmi_label"
+                android:paddingLeft="75dp"
+                android:text="Message"
+                android:textColor="#070707"
+                android:textSize="24sp" />
+
+        </RelativeLayout>
+
+
+        android:id="@+id/control"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="143dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="130dp"
+            android:layout_marginLeft="125dp"
+            android:layout_marginTop="125dp"
+            android:layout_marginBottom="-10dp"
+            android:layout_toRightOf="@id/start"
+            android:onClick="educateMe"
+            android:text="Educate Me"
+            android:textColor="#FBFCFD"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="142dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="-100dp"
+            android:layout_marginRight="50dp"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="callBMIAPI"
+            android:text="Call BMI API"
+            android:textColor="#F8F9FA"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
